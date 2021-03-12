@@ -1,0 +1,262 @@
+* {
+
+  box-sizing: content-box;
+
+}
+
+body {
+
+  margin:0;
+
+  height: 100%;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  font-family: monospace;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:#555;
+
+  background: #ecf0f3;
+
+}
+
+.login-form-design {
+
+  margin-top: 15px;  
+
+  width:320px;
+
+  height: 530px;
+
+  padding: 30px 17px 17px 17px;
+
+  border-radius: 40px;
+
+  background: #ecf0f3;
+
+  box-shadow: 13px 13px 20px #cbced1,
+
+              -13px -13px 20px #ffffff;
+
+}
+
+.form-logo-image {
+
+  background-image: url(https://1.bp.blogspot.com/-OPinuebKNzI/YAf_tNNrC9I/AAAAAAAAQNQ/DBv3c-qsWuodS8IWT2HIm-2-sbMqk-jFQCLcBGAsYHQ/s80/avatar.png);
+
+  width:81px;
+
+  height: 81px;
+
+  border-radius: 50%;
+
+  margin:0 auto;
+
+  box-shadow: 
+
+  0px 0px 2px #5f5f5f,
+
+  0px 0px 0px 5px #ecf0f3,
+
+  8px 8px 15px #a7aaaf,
+
+  -8px -8px 15px #ffffff;
+
+}
+
+.large-text-title {
+
+  text-align: center;
+
+  font-size: 21px;
+
+  padding-top: 23px;
+
+  letter-spacing: 0.6px;
+
+}
+
+.small-text {
+
+  text-align: center;
+
+  font-size: 10px;
+
+  padding-top: 6px;
+
+  letter-spacing: 3.1px;
+
+}
+
+.input-fields {
+
+  width: 99%;
+
+  padding: 30px 5.1px 5.1px 5.1px;
+
+}
+
+.input-fields input {
+
+  border: none;
+
+  outline:none;
+
+  background: none;
+
+  font-size: 12px;
+
+  color: #555;
+
+  padding:15px 5px 10px 2px;
+
+}
+
+.username, .password, .firstName, .lastName, .confirmPassword, .email {
+
+  margin-bottom: 15px;
+
+  border-radius: 25px;
+
+  box-shadow: inset 8px 8px 8px #cbced1,
+
+              inset -8px -8px 8px #ffffff;
+
+}
+
+.input-fields svg {
+
+  height: 25px;
+
+  margin:0 10px -3px 25px;
+
+}
+
+.signin-button {
+
+  outline: none;
+
+  border:none;
+
+  cursor: pointer;
+
+  width: 99%;
+
+  height: 40px;
+
+  border-radius: 29.9px;
+
+  font-size: 18px;
+
+  font-weight: 699.9;
+
+  font-family: monospace;
+
+  color:#fff;
+
+  text-align: center;
+
+  background: red;
+
+  box-shadow: 3px 3px 8px #b1b1b1,
+
+              -3px -3px 8px #ffffff;
+
+  transition: 0.5s;
+
+}
+
+.signin-button:hover {
+
+  background: #24cfaa;
+
+}
+
+.signin-button:active {
+
+  background:#1da88a;
+
+}
+
+.link {
+
+  padding-top: 15px;
+
+  text-align: center;
+
+}
+
+.link a {
+
+  color:black;
+
+  text-decoration: none;
+
+  list-style: none;
+
+  font-size: 11px;
+
+}
+
+footer {
+
+    height: 55px;
+
+    background-color: #555;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    bottom: 0;
+
+    position: fixed;
+
+    left: 0;
+
+    right: 0;
+
+    text-align: center;
+
+    z-index: 999;
+
+}
+
+footer p {
+
+    margin: auto;
+
+    margin-top: 20PX;
+
+    font-size: large;
+
+    color: red;
+
+    font-family: sans-serif;
+
+}
+
+#date {
+    color: white;
+}
+
+footer a {
+
+    color: #ff6f61;
+
+    text-decoration: none;
+
+    margin-right:5px;
+
+}
+
