@@ -32,11 +32,11 @@ body {
 
 .login-form-design {
 
-  margin-top: 90px;  
+  margin-top: 70px;  
 
   width:320px;
 
-  height: 430px;
+  min-height: 430px;
 
   padding: 30px 17px 17px 17px;
 
@@ -122,7 +122,7 @@ body {
 
 }
 
-.username, .password {
+.email, .password {
 
   margin-bottom: 15px;
 
@@ -143,6 +143,7 @@ body {
 }
 
 .signin-button {
+  margin-top: 15px;
 
   outline: none;
 
@@ -150,7 +151,7 @@ body {
 
   cursor: pointer;
 
-  width: 99%;
+  width: 96%;
 
   height: 40px;
 
