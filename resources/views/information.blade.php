@@ -19,7 +19,7 @@
                                 <a class="nav-link mb-sm-3 mb-md-0 "  href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')"><span class="fas fa-tachometer-alt mr-2"></span>{{ __('Dashboard') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0"  href="#"><span class="far fa-user-circle mr-2"></span>Gestion</a>
+                                <a class="nav-link mb-sm-3 mb-md-0"  href="{{ route('reserve')}}"><span class="far fa-user-circle mr-2"></span>Gestion</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mb-sm-3 mb-md-0 "  href="{{ route('parametre')}}"><span class="far fa-sun mr-2"></span>Paramétrage</a>

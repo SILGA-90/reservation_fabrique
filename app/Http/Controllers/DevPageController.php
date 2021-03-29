@@ -19,17 +19,13 @@ class DevPageController extends Controller
     public function insertion (Request $request)
     {
 
-
+        $id = $request->input('id');
         $choosed =  date('Y-m-d', strtotime($request->choosed_day)); 
-        $choisie = [$choosed];
-        $configuration = DB::insert('insert into reservation_day (choosed_day) value(?)', $choisie);
+        $reserv =false;
+        $choisie = [$choosed, $id,$reserv];
+        $configuration = DB::insert('insert into reservation_day (choosed_day, users_id, approved_at) value(?,?,?)',$choisie);
    
-    // $configuration  =   DevPage::create([
 
-    //         "choosed_day"       =>     date('Y-m-d', strtotime($request->choosed_day)),     
-    //     ]);
-
-        
         if(!is_null($configuration)) {
            return back()->with("success", "Reservation réussie, attendez confirmation.");
         }

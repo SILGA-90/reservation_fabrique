@@ -48,8 +48,8 @@ class day_interval extends Controller
         // return $data;
         // $debut = $data->debut;
         // $fin = $data->fin;
-        $startDate = new Carbon('2021-03-01');
-        $endDate = new Carbon('2021-03-07');
+        $startDate = new Carbon('2021-03-15');
+        $endDate = new Carbon('2021-03-20');
         $all_dates = array(); 
         while ($startDate->lte($endDate)) {
             $all_dates[] = $startDate->format('j F Y');

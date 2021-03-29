@@ -23,7 +23,7 @@ class CreateParamDayHoursTable extends Migration
         });
 
         // Schema::table('day_hours', function (Blueprint $table) {
-        //         $table->foreignId('param_days_id')->constrained();
+        //     $table->foreignId('param_days_id')->constrained();
         // });
     }
 

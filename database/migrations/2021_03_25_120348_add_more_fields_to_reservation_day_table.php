@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ReservationDay extends Migration
+class AddMoreFieldsToReservationDayTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class ReservationDay extends Migration
      */
     public function up()
     {
-        Schema::create('reservation_day', function (Blueprint $table) {
-            $table->id();
-            $table->string('choosed_day')->nullable();
-            $table->timestamps();
-        });
-
         Schema::table('reservation_day', function (Blueprint $table) {
-            $table->foreignId('users_id')->constrained();
+            $table->renameColumn('id', 'reservation_id');
+            $table->boolean('approved_at')->nullable();
         });
     }
 
@@ -31,6 +26,8 @@ class ReservationDay extends Migration
      */
     public function down()
     {
-         Schema::dropIfExists('reservation_day');
+        Schema::table('reservation_day', function (Blueprint $table) {
+            //
+        });
     }
 }

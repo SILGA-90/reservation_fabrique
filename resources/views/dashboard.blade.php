@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link type="text/css" href="../../vendor/bootstrap/dist/ccs/bootstrap.min.css" rel="stylesheet">
         <link type="text/css" href="../../css/neumorphism.css" rel="stylesheet">
+        <link type="text/css" href="../../css/dataTables.boostrap.min.css" rel="stylesheet">
+        <link type="text/css" href="../../css/datatables.min.css" rel="stylesheet">
 
 
 <body>
@@ -17,10 +19,10 @@
                     <div class="nav-wrapper position-relative">
                         <ul class="nav nav-pills rounded nav-fill flex-column flex-md-row">
                             <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0 active"  href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')"><span class="fas fa-tachometer-alt mr-2"></span>{{ __('Dashboard') }}</a>
+                                <a class="nav-link mb-sm-3 mb-md-0 active"  href="" :active="request()->routeIs('dashboard')"><span class="fas fa-tachometer-alt mr-2"></span>{{ __('Dashboard') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mb-sm-3 mb-md-0"  href="#"><span class="far fa-user-circle mr-2"></span>Gestion</a>
+                                <a class="nav-link mb-sm-3 mb-md-0"  href="{{ route('reserve')}}"><span class="far fa-user-circle mr-2"></span>Gestion</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mb-sm-3 mb-md-0"  href="{{ route('parametre')}}"><span class="far fa-sun mr-2"></span>Paramétrage</a>
@@ -90,7 +92,41 @@
             </div>
         </div>
     </header>
-
+    <div class="container">
+        <div class="row mt-6">
+            <div class="col-md-12">
+                <table id="apprenantList" class="table table-bordered table-striped ">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>Date d'enregistrement</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   @foreach ($users as $user)  
+                    <tr>
+                        <td>{{$user -> lastname}} </td>
+                        <td >{{$user -> firstname}} </td>
+                        <td >{{$user -> email}} </td>
+                        <td >{{$user -> created_at}} </td>
+                        <td >
+                            <a href="">
+                                <span  class="btn btn-success">Approuver</span>
+                            </a>   
+                            <a href = 'delete/{{ $user->id }}'>
+                                <span class="btn btn-danger" type="submit">Supprimer</span>
+                            </a>
+                        </td>
+                    </tr>
+                   @endforeach     
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
 
 <footer>
 
@@ -105,9 +141,23 @@
 
         <!-- Core -->
 <script src="../../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../vendor/jquery/dist/dataTables.min.js"></script>
+<script src="../../vendor/jquery/dist/datatables.min.js"></script>
+<script src="../../vendor/jquery/dist/jquery.dataTables.min.js"></script>
 <script src="../../vendor/popper.js/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../../js/neumorphism.js"></script>
+<script src="../../js/data.js"></script>
+{{-- <script>
+   
+    $('.addEmployee').click(function() {
+        $('#employeeModal').modal('show');
+        $('#employeeForm')[0].reset();
+        $('.modal-title').html("<i class='fa fa-plus'></i> DETAILS DU MESSAGE");
+        $('#action').val('addEmployee');
+        $('#save').val('Add');
+    });
+</script> --}}
 </body>
 
 </html>

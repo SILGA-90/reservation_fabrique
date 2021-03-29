@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 // use App\Models\User;
 use App\Http\Controllers\EmailConfigurationController;
 use App\Http\Controllers\DevPageController;
+use App\Http\Controllers\reservationController;
+use App\Http\Controllers\apprenantController;
 
 
 
@@ -60,7 +62,19 @@ Route::post("/informer", [EmailConfigurationController::class, "createConfigurat
 
 Route::get("/devPage", [DevPageController::class, 'showDate']);
 
-Route::post("/devPage", [DevPageController::class, 'insertion'])->name('reserve');
+Route::post("/devPage", [DevPageController::class, 'insertion']);
+
+// Route::get("/reservation", [reservationController::class, 'index']);
+
+Route::get("/reservation", [reservationController::class, 'showReserv'])->name('reserve');
+
+Route::post("/reservation", [reservationController::class, 'approba'])->name('approbation');
+
+// Route::post("/rejet", [reservationController::class, 'rejet'])->name('rejet');
+
+Route::get("/dashboard", [apprenantController::class, 'index'])->name('dashboard');
+
+Route::get("delete/{id}", [apprenantController::class, 'destroy'])->name('delete');
 
 
 

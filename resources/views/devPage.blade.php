@@ -172,6 +172,7 @@
                         <div class="col-md-12 mt-4 text-center">
                             <form action="/devPage"  method="POST">
                                 @csrf
+                                    <input type="hidden" value="{{ Auth::user()-> id }}" name="id">
                                     <div class="form-group">
                                         <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Choisir le jour</label>
                                         <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="choosed_day" required>
